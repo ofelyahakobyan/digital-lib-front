@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Api from '../Api';
+import Button from './Button';
 
 function Authors() {
   const [authors, setAuthors] = useState([]);
@@ -25,6 +26,7 @@ function Authors() {
             </div>
           ))}
         </div>
+        <Button buttonName="see more" />
       </div>
     </div>
   );
