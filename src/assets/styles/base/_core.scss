@@ -1,0 +1,18 @@
+//@import "../abstracts/variables";
+//@import "../abstracts/mixins";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $fz;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $ff_m;
+  background: $white;
+  color: $primary;
+}

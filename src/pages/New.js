@@ -1,10 +1,13 @@
 import React from 'react';
+import Wrapper from '../components/Wrapper';
 
 function New() {
   return (
-    <div>
-      <p> New </p>
-    </div>
+    <Wrapper>
+      <div style={{ height: 500, backgroundColor: 'white', paddingTop: 100 }}>
+        <p> New Page </p>
+      </div>
+    </Wrapper>
   );
 }
 

@@ -1,11 +1,13 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
+import Wrapper from '../components/Wrapper';
 
 function Home() {
   return (
-    <div>
-      <NavBar />
-    </div>
+    <Wrapper>
+      <div style={{ height: 500, backgroundColor: 'white', paddingTop: 100 }}>
+        <p> Home Page </p>
+      </div>
+    </Wrapper>
   );
 }
 

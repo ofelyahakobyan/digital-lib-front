@@ -1,10 +1,13 @@
 import React from 'react';
+import Wrapper from '../components/Wrapper';
 
 function NotFound() {
   return (
-    <div>
-      <p> Not found </p>
-    </div>
+    <Wrapper>
+      <div style={{ height: 500, backgroundColor: 'white', paddingTop: 100 }}>
+        <p> Now found Page </p>
+      </div>
+    </Wrapper>
   );
 }
 

@@ -1,12 +1,13 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
+import Wrapper from '../components/Wrapper';
 
 function Bestseller() {
   return (
-    <div>
-      <NavBar />
-      <p> Bestseller page </p>
-    </div>
+    <Wrapper>
+      <div style={{ height: 500, backgroundColor: 'white', paddingTop: 100 }}>
+        <p> BestsellerPage </p>
+      </div>
+    </Wrapper>
   );
 }
 

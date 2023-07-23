@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  height: 74px;
+  background-color: #F2EAE3;
+  display: flex;
+  position: fixed;
+
+  .general {
+    width: 75%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+
+    .general img {
+      width: 141px;
+      height: 67px;
+    }
+  }
+
+  .functional {
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .search {
+      width: 29px;
+      height: 24px;
+    }
+
+    .basket {
+      width: 44px;
+      height: 34px;
+    }
+
+    .wish,
+    .login {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
