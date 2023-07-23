@@ -1,0 +1,43 @@
+.authors {
+  width: 100%;
+  height: 688px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    h4 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 33px;
+      text-align: center;
+      color: #000000;
+      padding-bottom: 20px;
+
+    }
+    .list {
+      display: flex;
+      height: 45%;
+      .author {
+        width: 24%;
+        height: 100%;
+        border: 1px solid black;
+        margin-right: 10px;
+        img {
+          width: 100%;
+          height: 70%;
+        }
+        p {
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 26px;
+          text-align: center;
+        }
+      }
+
+    }
+  }
+}
