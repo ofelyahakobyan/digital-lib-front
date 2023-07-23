@@ -1,0 +1,5 @@
+@mixin torem($fz, $lh, $fw){
+  font-size: ($fz / 16) + rem;
+  line-height: ($lh / 16) + rem;
+  font-weight: $fw;
+}
