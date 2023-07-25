@@ -1,6 +1,7 @@
-.authors {
+.authors_list {
+  padding-top: 80px;
   width: 100%;
-  height: 688px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +11,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+
     h4 {
       font-size: 28px;
       font-weight: 700;
@@ -17,32 +19,28 @@
       text-align: center;
       color: #000000;
       padding-bottom: 30px;
+      padding-top: 40px;
 
     }
+
     .list {
       display: flex;
-      height: 40%;
+      height: 80%;
 
       .card {
         margin: 10px;
         width: 24%;
         height: 90%;
-        a {
-          text-decoration: none;
-          font-size: 22px;
-          font-weight: 700;
-          line-height: 26px;
-          text-align: center;
-          color: #000000;
-        }
       }
-      }
-
-
-    button {
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 30px;
     }
+
+  }
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
   }
 }

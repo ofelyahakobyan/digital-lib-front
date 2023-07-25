@@ -9,6 +9,8 @@ import NotFound from './pages/NotFound';
 import Popular from './pages/Popular';
 import Bestseller from './pages/Bestseller';
 import ContactUs from './pages/ContactUs';
+import AuthorsList from './pages/AuthorsList';
+import SingleAuthor from './pages/SingleAuthor';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/authors" element={<AuthorsList />} />
+        <Route path="/authors/single/:id" element={<SingleAuthor />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/new" element={<New />} />
         <Route path="/popular" element={<Popular />} />
