@@ -16,6 +16,15 @@ class Api {
   static getSingleAuthor(id) {
     return api.get(`/authors/single/${id}`);
   }
+
+  static getAuthorsBooks(id, page, limit) {
+    return api.get(`/books/author/${id}`, {
+      params: {
+        page,
+        limit,
+      },
+    });
+  }
 }
 
 export default Api;

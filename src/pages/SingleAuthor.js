@@ -1,36 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Card from '@mui/material/Card';
-import { CardActionArea } from '@mui/material';
-import CardMedia from '@mui/material/CardMedia';
 import Api from '../Api';
 import Wrapper from '../components/layout/Wrapper';
+import SingleInfo from '../components/SingleInfo';
 
 function SingleAuthor() {
   const { id } = useParams();
   const [author, setAuthor] = useState([]);
+  const [books, setBooks] = useState([]);
+
   useEffect(() => {
     (async () => {
       const { data } = await Api.getSingleAuthor(id);
       setAuthor(data.author);
     })();
   }, [id]);
+  useEffect(() => {
+    (async () => {
+      const { data } = await Api.getAuthorsBooks(id);
+      setBooks(data.books);
+    })();
+  }, [id]);
 
-  console.log(author);
   return (
     <Wrapper>
       <div className="single_author">
         <div className="container">
-          <Card sx={{ maxWidth: 345 }} className="card" key={author.id}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={`http://localhost:4000/public/${author.avatar}`}
-                alt={author.fullName}
-              />
-            </CardActionArea>
-          </Card>
+          <SingleInfo data={author} link="/authors/single" name={author.fullName} />
           <div>
             <h4>
               {' '}
@@ -41,6 +37,13 @@ function SingleAuthor() {
               {author.bio}
             </p>
           </div>
+        </div>
+      </div>
+      <div className="books">
+        <div className="container">
+          {books ? books.map((b) => (
+            <SingleInfo data={b} link="/books/single" name={b.title} />
+          )) : null}
         </div>
       </div>
     </Wrapper>

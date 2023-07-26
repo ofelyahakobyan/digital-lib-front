@@ -11,6 +11,7 @@ import Bestseller from './pages/Bestseller';
 import ContactUs from './pages/ContactUs';
 import AuthorsList from './pages/AuthorsList';
 import SingleAuthor from './pages/SingleAuthor';
+import SingleBook from './pages/SingleBook';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/authors" element={<AuthorsList />} />
         <Route path="/authors/single/:id" element={<SingleAuthor />} />
+        <Route path="/books/single/:id" element={<SingleBook />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/new" element={<New />} />
         <Route path="/popular" element={<Popular />} />
