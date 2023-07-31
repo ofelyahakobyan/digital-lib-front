@@ -1,0 +1,29 @@
+.paginateBtns {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  cursor: pointer;
+}
+.paginateBtns a {
+  border-radius: 5px;
+  border: 1px solid #BF9775;
+  padding: 10px;
+  margin: 3px;
+}
+.paginateBtns a:hover,
+.activeBtn a {
+  background-color: #BF9775;
+  color: white;
+}
+
+.previousBtn,
+.nextBtn {
+  color: #BF9775;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}

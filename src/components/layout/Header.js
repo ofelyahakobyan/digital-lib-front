@@ -1,17 +1,20 @@
 import React from 'react';
-import logo from '../assets/icons/logo.svg';
-import NavBar from './NavBar';
-import searchIcon from '../assets/icons/search.svg';
-import basketIcon from '../assets/icons/basket.svg';
-import wishListIcon from '../assets/icons/wishlist.svg';
-import loginIcon from '../assets/icons/login.svg';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/icons/logo.svg';
+import NavBar from '../NavBar';
+import searchIcon from '../../assets/icons/search.svg';
+import basketIcon from '../../assets/icons/basket.svg';
+import wishListIcon from '../../assets/icons/wishlist.svg';
+import loginIcon from '../../assets/icons/login.svg';
 
 function Header() {
   return (
     <div className="header">
       <div className="general">
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <Link to="/home">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
         <NavBar />
         <div className="functional">

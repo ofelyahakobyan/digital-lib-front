@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import location from '../assets/icons/location.svg';
-import phone from '../assets/icons/phone.svg';
-import facebook from '../assets/icons/facebook.svg';
-import twitter from '../assets/icons/twitter.svg';
-import pinterest from '../assets/icons/pinterest.svg';
-import instagram from '../assets/icons/instagram.svg';
-import payments from '../assets/icons/icon-pay 1.jpg';
-import logo from '../assets/icons/logo.svg';
+import location from '../../assets/icons/location.svg';
+import phone from '../../assets/icons/phone.svg';
+import facebook from '../../assets/icons/facebook.svg';
+import twitter from '../../assets/icons/twitter.svg';
+import pinterest from '../../assets/icons/pinterest.svg';
+import instagram from '../../assets/icons/instagram.svg';
+import payments from '../../assets/icons/icon-pay 1.jpg';
+import logo from '../../assets/icons/logo.svg';
 
 function Footer() {
   return (
@@ -81,7 +81,9 @@ function Footer() {
             </div>
 
             <div className="logo">
-              <img src={logo} alt="logo" />
+              <Link to="/home">
+                <img src={logo} alt="logo" />
+              </Link>
             </div>
             <div className="payments">
               <img src={payments} alt="payments" />
