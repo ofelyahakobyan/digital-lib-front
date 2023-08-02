@@ -15,8 +15,15 @@
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [".js", ".jsx"]
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
     ]
     //rules must be added here
   }
