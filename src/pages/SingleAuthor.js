@@ -26,24 +26,24 @@ function SingleAuthor() {
     <Wrapper>
       <div className="single_author">
         <div className="container">
-          <SingleInfo data={author} link="/authors/single" name={author.fullName} />
+          <SingleInfo
+            data={author}
+            link="/authors/single"
+            name={author.fullName}
+          />
           <div>
-            <h4>
-              {' '}
-              {author.fullName}
-            </h4>
-            <p>
-              {' '}
-              {author.bio}
-            </p>
+            <h4>{author.fullName}</h4>
+            <p>{author.bio}</p>
           </div>
         </div>
       </div>
       <div className="books">
         <div className="container">
-          {books ? books.map((b) => (
-            <SingleInfo data={b} link="/books/single" name={b.title} />
-          )) : null}
+          {books
+            ? books.map((b) => (
+              <SingleInfo data={b} link="/books/single" name={b.title} />
+            ))
+            : null}
         </div>
       </div>
     </Wrapper>
