@@ -26,9 +26,9 @@ function Footer() {
           <div className="text">
             <h4> Books: Unlocking Minds, Inspiring Souls </h4>
             <p>
+              {/* eslint-disable-next-line max-len */}
               Reading is a passport to countless worlds, a journey that expands our minds, touches our hearts,
-              and
-              ignites our imagination.
+              and ignites our imagination.
             </p>
           </div>
           <div className="resources">

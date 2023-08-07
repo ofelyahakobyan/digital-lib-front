@@ -1,0 +1,24 @@
+.books_component {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+
+
+    .container {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        h4 {
+            padding: 25px;
+        }
+        .list {
+            display: flex;
+            height: 80%;
+        }
+
+    }
+}

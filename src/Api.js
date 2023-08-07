@@ -25,6 +25,24 @@ class Api {
       },
     });
   }
+
+  static getBooksByCategoryForHomePage(id, page, limit) {
+    return api.get(`books/category/${id}`, {
+      params: {
+        page,
+        limit,
+      },
+    });
+  }
+
+  static getCategoriesList(page, limit) {
+    return api.get('/categories', {
+      params: {
+        page,
+        limit,
+      },
+    });
+  }
 }
 
 export default Api;
