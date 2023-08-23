@@ -17,6 +17,36 @@ class Api {
     return api.get(`/authors/single/${id}`);
   }
 
+  static userRegistration(firstName, lastName, email, password) {
+    return api.post('/user/registration', {
+      firstName, lastName, email, password,
+    });
+  }
+
+  static userLogin(email, password) {
+    return api.post('/user/login', { email, password });
+  }
+
+  static userForgotPassword(email) {
+    return api.post('/user/password-forgot', { email });
+  }
+
+  static getUserByEmail(email) {
+    return api.get('/user/user', email);
+  }
+
+  static getUserProfile() {
+    return api.get('/user/profile');
+  }
+
+  static userResetPassword(code, email, newPassword) {
+    return api.post('/user/password-reset', { code, email, newPassword });
+  }
+
+  static getUsersList() {
+    return api.get('/users');
+  }
+
   static getAuthorsBooks(id, page, limit) {
     return api.get(`/books/author/${id}`, {
       params: {
@@ -42,6 +72,10 @@ class Api {
         limit,
       },
     });
+  }
+
+  static getBookReviews(id) {
+    return api.get(`books/${id}/reviews`);
   }
 }
 

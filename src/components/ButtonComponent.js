@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 function ButtonComponent(props) {
   const {
-    buttonName, size, color, link,
+    buttonName, size, color, link, type,
   } = props;
   const theme = createTheme({
     palette: {
@@ -21,7 +21,10 @@ function ButtonComponent(props) {
   });
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained" href={link} color={color} size={size}>{buttonName}</Button>
+      <Button variant="contained" href={link} color={color} size={size} type={type}>
+        {buttonName}
+        {' '}
+      </Button>
     </ThemeProvider>
   );
 }
@@ -30,5 +33,9 @@ ButtonComponent.propTypes = {
   size: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  type: PropTypes.string,
+};
+ButtonComponent.defaultProps = {
+  type: 'button',
 };
 export default ButtonComponent;

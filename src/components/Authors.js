@@ -19,7 +19,7 @@ function Authors() {
         <h4> Authors of books </h4>
         <div className="list">
           {authors ? authors.map((a) => (
-            <SingleInfo data={a} link="/authors/single" name={`${a.fullName}`} key={a.id} />
+            <SingleInfo data={a} link="/authors/single" name={`${a.fullName}`} key={a.id} className="authors_info" />
           )) : null}
         </div>
         <div className="button_container">

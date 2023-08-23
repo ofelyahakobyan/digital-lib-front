@@ -12,12 +12,24 @@ import ContactUs from './pages/ContactUs';
 import AuthorsList from './pages/AuthorsList';
 import SingleAuthor from './pages/SingleAuthor';
 import SingleBook from './pages/SingleBook';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
+import ForgotPassword from './components/ForgotPassword';
+import ResetPassword from './components/ResetPassword';
+import User from './pages/User';
+import PersonalInfo from './components/user/PersonalInfo';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/register" element={<SignUp />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/user/:id" element={<User />} />
+        <Route path="/user-profile" element={<PersonalInfo />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/home" element={<Home />} />
         <Route path="/authors" element={<AuthorsList />} />
         <Route path="/authors/single/:id" element={<SingleAuthor />} />

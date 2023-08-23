@@ -21,7 +21,9 @@ function Header() {
           <img src={searchIcon} alt="searchIcon" className="search" />
           <img src={basketIcon} alt="basketIcon" className="basket" />
           <img src={wishListIcon} alt="wishListIcon" className="wish" />
-          <img src={loginIcon} alt="loginIcon" className="login" />
+          <Link to="/login">
+            <img src={loginIcon} alt="loginIcon" className="login" />
+          </Link>
         </div>
       </div>
     </div>
