@@ -1,0 +1,175 @@
+.h1 {
+    padding-top: 30px;
+    text-align: center;
+}
+.user_navigation {
+    width: 30%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 13%;
+}
+.user_nav {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+.user_nav.active {
+    font-weight: 700;
+}
+.span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: #000000;
+}
+
+.img {
+    margin-right: 25px;
+    height: 30px;
+    width: 30px;
+}
+.button {
+    border: none;
+    background-color: unset;
+}
+.profile {
+    width: 100%;
+}
+.personal_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+.title  {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33px;
+    text-align: left;
+    padding-bottom: 18px;
+}
+.info_text {
+    padding-bottom: 30px;
+    max-width: 600px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+
+.info_edit {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    align-items: center;
+}
+.change_password {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    position: absolute;
+    left: 43%;
+    width: 40%;
+}
+.input,
+.input_disabled {
+    width: 80%;
+    height: 40px;
+    border: 2px solid #E0E0E0;
+    margin-top: 10px;
+}
+.input_disabled {
+   opacity: 0.4;
+}
+.change_button,
+.change_button_disabled {
+        width: 15%;
+        height: 45px;
+        font-weight: 700;
+        display: block;
+        margin-left: 35%;
+        margin-top: 30px;
+        background-color: #8C4C27;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+}
+.change_button_disabled {
+    opacity: 0.4;
+}
+.paragraph {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    color: darkgreen;
+    padding-top: 20px;
+}
+.paragraph_error {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    color: darkred;
+    padding-top: 20px;
+}
+.button {
+    border: none;
+    background-color: unset;
+    display: flex;
+    align-items: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+.about_item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+.info {
+    font-size: 16px;
+    color: black;
+    margin-right: 20px;
+    opacity: 0.8;
+}
+.review {
+    width: 75%;
+}
+.review_title {
+    text-align: center;
+    padding: 15px;
+}
+.review_block {
+    width: 40%;
+    background: #D9D9D933;
+    padding: 15px;
+    margin: 15px;
+}
+.review_rating {
+    margin: 7px;
+}
+.review_tit {
+    margin: 3px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.review_info {font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+}

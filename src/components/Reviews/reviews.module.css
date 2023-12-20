@@ -1,0 +1,106 @@
+.reviews {
+    width: 75%;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.title {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 30px 0;
+}
+.date {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    color: #868686;
+}
+.user {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+.image {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 25px;
+}
+.name {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+.user_review {
+    width: 75%;
+    padding: 30px 0;
+}
+.review_title {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: #0D0D0D;
+}
+.desc {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+.popup_input {
+    width: 100%;
+    height: 25px;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+}
+.popup_text_input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+    margin: 5px;
+
+}
+.popup_button {
+    width: 30%;
+    height: 30px;
+    background-color: white;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, 0.16);
+    color: #BF9775;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 35%;
+}
+.error_message {
+    font-size: 18px;
+    font-weight: 700;
+    color: darkred;
+}
+.edit_button,
+.delete_button {
+    width: 60px;
+    height: 30px;
+    border: unset;
+    background-color: unset;
+    margin: 10px;
+    color: #BF9775;;
+    font-size: 12px;
+    font-weight: 700;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -265px;
+    margin-top: -30px;
+}
+

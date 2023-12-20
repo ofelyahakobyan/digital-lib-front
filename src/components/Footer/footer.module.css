@@ -1,0 +1,118 @@
+.footer {
+    width: 100%;
+    background-color: #F2EAE3;
+    padding-top: 25px;
+}
+.container {
+    width: 75%;
+    height: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 30px auto;
+}
+.footer_container {
+    width: 100%;
+    height: 53%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.component {
+    width: 25%;
+}
+.info {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #868686;
+}
+.catalog {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+}
+.title {
+    padding-bottom: 15px;
+}
+.link {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #868686;
+    text-decoration: none;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.address {
+    width: 30px;
+    height: 33px;
+    margin-right: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 25px;
+    margin-right: 20px;
+}
+.social {
+    height: 13%;
+    display: flex;
+    padding-top: 20px;
+}
+.logo,
+.payments,
+.media {
+    width: 33.3%;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.payments {
+    display: flex;
+    justify-content: flex-end;
+}
+.payment_icon {
+        width: 70%;
+        height: 28px;
+    margin-left: 85px;
+}
+.media {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.information {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+    color: #000000;
+    margin-right: 30px;
+}
+.img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+.logo_img {
+    width: 138px;
+    height: 67px;
+    margin-left: 80px;
+}
+

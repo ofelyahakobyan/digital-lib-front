@@ -1,0 +1,43 @@
+.authors {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.title { font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.list {
+    display: flex;
+    height: 65%;
+
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 184px;
+    height: 52px;
+    background: #BF9775;
+    border: unset;
+    border-radius: 3px;
+    color: white;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: center;
+}

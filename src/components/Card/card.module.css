@@ -1,0 +1,148 @@
+.card {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.container {
+    width: 75%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+.card_title {
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 12.5%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.card_general {
+    width: 60%;
+}
+.card_info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.card_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card_img {
+    width: 160px;
+    height: 232px;
+    border: 1px solid burlywood;
+    margin-right: 20px;
+}
+.price {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+.payment {
+    width: 30%;
+}
+.info {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    border: unset;
+    background-color: unset;
+    width: 24px;
+    height: 24px;
+}
+.info_title,
+.info_title_total {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #868686;
+}
+.info_title_total {
+    color: black;
+}
+.count {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+.check_button {
+    width: 100%;
+    background: #8C4C27;
+    height: 40px;
+    border: unset;
+    color: white;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+
+}
+
+.semi_title {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+.desc {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.payment_img {
+    width: 85%;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

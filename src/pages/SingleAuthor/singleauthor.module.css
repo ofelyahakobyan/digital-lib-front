@@ -1,0 +1,29 @@
+.single_author {
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    width: 75%;
+    display: flex;
+}
+.title {
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+.books {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info {
+    width: 73%;
+    margin-left: 5%;
+}

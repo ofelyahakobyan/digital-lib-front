@@ -1,0 +1,65 @@
+.title {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8C4C27;
+}
+.accordion {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.details {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #868686;
+    margin-bottom: 5px;
+}
+.accrordion_details {
+    height: 100px;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+
+.button_accord {
+border: unset;
+    background-color: unset;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8C4C27;
+    display: block;
+    margin: 15px 0;
+
+
+}
+.icon_button {
+    border: unset;
+    background-color: unset;
+    position: absolute;
+    right: 72%;
+}
+
+    .img {
+        width: 18px;
+        height: 18px;
+        margin-top: 6px;
+    }
+.input {
+    width: 100%;
+    height: 30px;
+    background-color: #D0D5DD33;
+    border: unset;
+    border-radius: 3px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}

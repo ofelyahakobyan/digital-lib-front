@@ -1,0 +1,11 @@
+.wishlist {
+    width: 100%;
+    display: flex;
+    margin: 50px 0;
+}
+.container {
+    width: 75%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}

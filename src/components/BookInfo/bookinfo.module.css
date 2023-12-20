@@ -1,0 +1,126 @@
+.info {
+    width: 23%;
+    height: 408px;
+    margin-left: 15px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    height: 65%;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5%;
+    right: 7%;
+}
+
+.button {
+    width: 35px;
+    height: 35px;
+    background-color: unset;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    border: unset;
+}
+
+.data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+}
+
+.error {
+    color: darkred;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.success {
+    color: green;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+}
+.price {
+     font-family: Roboto;
+     font-size: 20px;
+     font-weight: 600;
+     text-align: center;
+     margin-top: 7px;
+ }
+.name,
+.author {
+    font-family: Roboto;
+    max-width: 350px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 15px;
+
+}
+.hover {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 2s;
+}
+
+.delete_button {
+    width: 25px;
+    height: 25px;
+}
+.selected {
+    width: 40px;
+    height: 40px;
+}
+.hovered_text {
+    color: black;
+    opacity: 0.4;
+}
