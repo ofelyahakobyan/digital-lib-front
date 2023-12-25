@@ -41,22 +41,26 @@ function Header() {
         <NavLink to="/catalog" className={`${classes.link}`}>Catalog</NavLink>
         <NavLink to="/new-books" className={`${classes.link}`}>New</NavLink>
         <NavLink to="/popular" className={`${classes.link}`}>Popular</NavLink>
-        <NavLink to="/contact_us" className={`${classes.link}`}>Contact us</NavLink>
+        <NavLink to="/contact" className={`${classes.link}`}>Contact us</NavLink>
       </div>
       <div className={`${classes.profile}`}>
         <Link to={`/user/${profile.id}/card`}>
           <img src={basketIcon} alt="basketIcon" className="basket" />
-          <p>
-            {' '}
-            {card.length}
-          </p>
+          {card.length > 0 ? (
+            <p className={`${classes.quantity}`}>
+              {' '}
+              {card.length}
+            </p>
+          ) : null}
         </Link>
         <Link to={`/user/${profile.id}/wishlist`}>
           <img src={wishListIcon} alt="wishListIcon" className="wish" />
-          <p>
-            {' '}
-            {wishlist.length}
-          </p>
+          { wishlist.length > 0 ? (
+            <p className={`${classes.quantity_wish}`}>
+              {' '}
+              {wishlist.length}
+            </p>
+          ) : null }
         </Link>
         {token ? (
           <Link to={`/user/${profile.id}`}>

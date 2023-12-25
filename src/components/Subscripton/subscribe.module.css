@@ -55,3 +55,15 @@
     border-radius: 3px;
     border: unset;
 }
+.info_success {
+    color: darkgreen;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.info_fail {
+    color: darkred;
+    font-size: 16px;
+    margin-left: 10px;
+    
+}

@@ -73,7 +73,8 @@
     display: flex;
     width: 60%;
 }
-.button_buy {
+.button_buy,
+.disabled {
     width: 80px;
     height: 40px;
     background: #BF9775;
@@ -86,5 +87,9 @@
     margin-left: 92%;
     margin-bottom: 50px;
     margin-top: -110px;
+    cursor: pointer;
 
+}
+.disabled {
+    opacity: 0.4;
 }

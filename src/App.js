@@ -16,10 +16,15 @@ import BooksByCategory from './pages/BooksByCategory/BooksByCategory';
 import Authors from './pages/Authors/Authors';
 import New from './pages/New/New';
 import Popular from './pages/Popular/Popular';
-import Book from './components/Book/Book';
+import BookPreview from './components/Book/BookPreview';
+import BookFull from './components/Book/BookFull';
 import Payment from './components/Payment/Payment';
 import ChangeInfo from './pages/UserProfile/ChangeInfo';
 import UserReviews from './pages/UserProfile/UserReviews';
+import Audio from './pages/Audio/Audio';
+import Contact from './pages/Contact/Contact';
+import PurchaseSuccess from './components/PurchaseSuccess/PurchaseSuccess';
+import UserBooks from './pages/UserProfile/UserBooks';
 
 function App() {
   return (
@@ -43,8 +48,13 @@ function App() {
         <Route path="/user/:id/card" element={<Card />} />
         <Route path="/user/:id/reviews" element={<UserReviews />} />
         <Route path="/books/category/:id" element={<BooksByCategory />} />
-        <Route path="/books/single/:id/book" element={<Book />} />
+        <Route path="/books/audio/:id" element={<Audio />} />
+        <Route path="/books/single/:id/book-preview" element={<BookPreview />} />
+        <Route path="/books/single/:id/book-full" element={<BookFull />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/user-books/:id" element={<UserBooks />} />
+        <Route path="/purchase-success" element={<PurchaseSuccess />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Signin from '../../assets/images/signin.png';
 import Wrapper from '../Wrapper/Wrapper';
-import Google from '../../assets/icons/google.svg';
-import Facebook from '../../assets/icons/face.svg';
+// import Google from '../../assets/icons/google.svg';
+// import Facebook from '../../assets/icons/face.svg';
 import classes from './login.module.css';
 import { loginRequest } from '../../store/actions/users';
 
@@ -42,7 +42,7 @@ function Login() {
             <p className={`${classes.text}`}>
               {' '}
               Don`t have an account?
-              <Link to="/register" className={`${classes.link}`}> Create Now </Link>
+              <Link to="/registration" className={`${classes.link}`}> Create Now </Link>
             </p>
             <form onSubmit={handleSubmit} className={`${classes.form}`}>
               <label htmlFor="email" className={`${classes.label}`}>
@@ -67,7 +67,7 @@ function Login() {
               </Link>
               <button type="submit" className={`${classes.button}`}> Sign in</button>
             </form>
-            <div className={`${classes.social_media}`}>
+            {/* <div className={`${classes.social_media}`}>
               <div className={`${classes.suggestion}`}>
                 <hr className={`${classes.line}`} />
                 <h2 className={`${classes.title}`}> Or </h2>
@@ -77,7 +77,7 @@ function Login() {
                 <img src={Google} alt="google" />
                 <img src={Facebook} alt="facebook" style={{ marginLeft: 50 }} />
               </div>
-            </div>
+            </div> */}
           </div>
           <div />
         </div>

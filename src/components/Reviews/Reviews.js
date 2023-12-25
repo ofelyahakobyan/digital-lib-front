@@ -55,7 +55,8 @@ function Reviews() {
   }, [formData]);
   console.log(reviews);
   const handleDelete = useCallback(async (id) => {
-    dispatch(deleteReview({ reviewId: id }));
+    await dispatch(deleteReview({ reviewId: id }));
+    await dispatch(getBookReviewsReq({ id }));
   }, [id]);
   const ratingChanged = (newRating) => {
     setFormData({ ...formData, changedRating: +newRating });

@@ -20,6 +20,18 @@
     text-align: left;
     color: #868686;
     margin-bottom: 5px;
+    cursor: pointer;
+}
+.selected {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8C4C27;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
 .accrordion_details {
     height: 100px;

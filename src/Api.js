@@ -9,6 +9,7 @@ api.interceptors.request.use((config) => {
     // eslint-disable-next-line no-param-reassign
     config.headers.Authorization = token;
   }
+
   return config;
 }, () => {
 

@@ -12,7 +12,7 @@ const initialState = {
 export default createReducer(initialState, (builder) => {
   builder
     .addCase(postReview.fulfilled, (state, action) => {
-      state.review = action.payload.review;
+      state.review.push(action.payload.review);
     })
     .addCase(editReview.fulfilled, (state, action) => {
       state.review = action.payload.review;

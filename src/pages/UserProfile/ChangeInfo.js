@@ -84,13 +84,13 @@ function ChangeInfo() {
               onChange={handleChange('phone')}
               className={`${classes.input}`}
             />
-            <input
+            {/*   <input
               type="file"
               placeholder="avatar"
               value={formData.avatar}
               onChange={handleChange('avatar')}
               className={`${classes.input}`}
-            />
+            /> */}
             <input
               type="text"
               placeholder="shortAbout"

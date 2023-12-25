@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import leftImage from '../../assets/images/leftImage.png';
 import rightImage from '../../assets/images/rightImage.png';
 import classes from './adscomponent.module.css';
@@ -11,7 +12,7 @@ function AdsComponent() {
         <div className={`${classes.ad}`}>
           <h4 className={`${classes.title}`}> Latest news and updates </h4>
           <p className={`${classes.text}`}> Stay informed and inspired</p>
-          <button type="button" className={`${classes.button}`}>More </button>
+          <Link to="/new-books" className={`${classes.button}`}>More </Link>
         </div>
         <img src={rightImage} alt="books" className={`${classes.image}`} />
       </div>

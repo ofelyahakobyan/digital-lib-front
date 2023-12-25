@@ -32,6 +32,7 @@ function Search() {
     { id: 4, language: 'Chinese' },
   ];
   console.log(books);
+  const [selectedItem, setSelectedItem] = useState([]);
   const [categoryIds, setCategoryIds] = useState([]);
   const [authorIds, setAuthorIds] = useState([]);
   const [languages, setLanguages] = useState([]);
@@ -43,6 +44,8 @@ function Search() {
       searchParams.set('category_ids', categoryIds);
       setSearchParams(searchParams);
     }
+    selectedItem.push(id);
+    setSelectedItem(selectedItem);
   }, []);
   const handleAddAuthor = useCallback((id) => {
     if (!authorIds.includes(id)) {
@@ -51,6 +54,8 @@ function Search() {
       searchParams.set('author_ids', authorIds);
       setSearchParams(searchParams);
     }
+    selectedItem.push(id);
+    setSelectedItem(selectedItem);
   }, []);
   const handleAddPrice = useCallback((id) => {
     if (id === 1) {
@@ -68,6 +73,8 @@ function Search() {
       searchParams.set('maxPrice', 9999);
     }
     setSearchParams(searchParams);
+    selectedItem.push(id);
+    setSelectedItem(selectedItem);
   }, []);
   const handleAddLanguage = useCallback((language) => {
     if (!languages.includes(language)) {
@@ -76,6 +83,8 @@ function Search() {
       searchParams.set('languages', languages);
       setSearchParams(searchParams);
     }
+    selectedItem.push(language);
+    setSelectedItem(selectedItem);
   }, []);
   useEffect(() => {
     (async () => {
@@ -114,6 +123,7 @@ function Search() {
       setSearchParams(searchParams);
     }
   }, [value]);
+
   return (
     <>
       <div className="container">
@@ -134,8 +144,8 @@ function Search() {
         </AccordionSummary>
         <AccordionDetails className={`${classes.accrordion_details}`}>
           {categories ? categories.map((d) => (
-            <Typography key={d.id} onClick={() => handleAddCategory(d.id)} className={`${classes.details}`}>
-              { d.category}
+            <Typography key={d.id} onClick={() => handleAddCategory(d.id)} className={selectedItem.includes(d.id) ? `${classes.selected}` : `${classes.details}`}>
+              { d.category }
               {' '}
             </Typography>
           )) : null}
@@ -153,7 +163,7 @@ function Search() {
         </AccordionSummary>
         <AccordionDetails>
           {prices ? prices.map((p) => (
-            <Typography key={p.id} onClick={() => handleAddPrice(p.id)} className={`${classes.details}`}>
+            <Typography key={p.id} onClick={() => handleAddPrice(p.id)} className={selectedItem.includes(p.id) ? `${classes.selected}` : `${classes.details}`}>
               { p.price}
               {' '}
             </Typography>
@@ -172,7 +182,7 @@ function Search() {
         </AccordionSummary>
         <AccordionDetails className={`${classes.accrordion_details}`}>
           {authors ? authors.map((a) => (
-            <Typography key={a.id} onClick={() => handleAddAuthor(a.id)} className={`${classes.details}`}>
+            <Typography key={a.id} onClick={() => handleAddAuthor(a.id)} className={selectedItem.includes(a.id) ? `${classes.selected}` : `${classes.details}`}>
               { a.fullName}
               {' '}
             </Typography>
@@ -237,7 +247,7 @@ function Search() {
         </AccordionSummary>
         <AccordionDetails>
           {languagesArr ? languagesArr.map((l) => (
-            <Typography key={l.id} onClick={() => handleAddLanguage(l.language)} className={`${classes.details}`}>
+            <Typography key={l.id} onClick={() => handleAddLanguage(l.language)} className={selectedItem.includes(l.language) ? `${classes.selected}` : `${classes.details}`}>
               { l.language}
               {' '}
             </Typography>

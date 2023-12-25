@@ -30,7 +30,7 @@ function UserNavigation() {
           <span className={`${classes.span}`}> Personal information </span>
         </div>
       </NavLink>
-      <NavLink to="/user-books">
+      <NavLink to={`/user-books/${profile.id}`}>
         <div className={`${classes.user_nav}`}>
           <img className={`${classes.img}`} src={booksImg} alt="book" />
           <span className={`${classes.span}`}>My Books</span>

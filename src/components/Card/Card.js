@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ReactStars from 'react-stars';
 import axios from 'axios';
+import { loadStripe } from '@stripe/stripe-js';
 import { userCardDeleteRequest, userCardRequest } from '../../store/actions/users';
 import deleteButton from '../../assets/icons/delete.svg';
 import payments from '../../assets/icons/icon-pay 1.jpg';
@@ -11,26 +12,37 @@ import classes from './card.module.css';
 
 function Card() {
   const dispatch = useDispatch();
+  const stripePromise = loadStripe('pk_test_51NaJjoHkPKk7KxBe89uCsxphPjJX99yVXMORwAKQhTNeHkB1H0xQqDNZYiJzWm7V4xAtsHhnx252KXGRovJJ8dBp00xVNNSoYG');
   const card = useSelector((state) => state.users.card);
   const info = useSelector((state) => state.users.info);
   const status = useSelector((state) => state.users.status);
+  const token = localStorage.getItem('token');
+  const books = [];
   const handleDelete = useCallback(async (id) => {
     await dispatch(userCardDeleteRequest({ bookId: +`${id}` }));
     await dispatch(userCardRequest());
+    card.map((c) => {
+      if (!books.includes(c.bookFiles.bookId)) {
+        books.push(c.bookFiles.bookId);
+      }
+      return books;
+    });
   }, [card.length]);
-  console.log(card);
-  const token = localStorage.getItem('token');
+  card.map((c) => {
+    books.push(c.bookFiles.bookId);
+    return books;
+  });
   const handleClick = useCallback(async () => {
-    const data = await axios.post('http://localhost:4000/api/v1/ordesr/checkout-session', {
+    const data = await axios.post('http://localhost:4000/api/v1/orders/checkout-session', {
+      books,
+    }, {
       headers: {
-        authorization: token,
-      },
-      params: {
-        books: [111, 115],
+        authorization: `Bearer ${token}`,
       },
     });
-    console.log(data);
+    (await stripePromise).redirectToCheckout({ sessionId: data.data.sessionId });
   }, []);
+
   return (
     <Wrapper>
       <div className={`${classes.card}`}>
@@ -88,7 +100,7 @@ function Card() {
               <span className={`${classes.info_title}`}> Quantity </span>
               <span className={`${classes.count}`}>
                 {' '}
-                {info.quantity}
+                {card.length}
                 {' '}
               </span>
             </div>

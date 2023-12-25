@@ -2,10 +2,12 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactStars from 'react-stars';
+import axios from 'axios';
+import { loadStripe } from '@stripe/stripe-js';
 import Wrapper from '../../components/Wrapper/Wrapper';
 import { getSingleBookRequest } from '../../store/actions/books';
 import readButton from '../../assets/icons/read.svg';
-import downloadButton from '../../assets/icons/download.svg';
+// import downloadButton from '../../assets/icons/download.svg';
 import cardButton from '../../assets/icons/cart.svg';
 import wishlistButton from '../../assets/icons/wish.svg';
 import classes from './singlebook.module.css';
@@ -20,12 +22,14 @@ import {
 
 function SingleBook() {
   const { id } = useParams();
+  const stripePromise = loadStripe('pk_test_51NaJjoHkPKk7KxBe89uCsxphPjJX99yVXMORwAKQhTNeHkB1H0xQqDNZYiJzWm7V4xAtsHhnx252KXGRovJJ8dBp00xVNNSoYG');
   const dispatch = useDispatch();
   const singleBook = useSelector((state) => state.books.singleBook);
   const reviews = useSelector((state) => state.books.reviews);
   const [information, setInformation] = useState('');
   const [error, setError] = useState(false);
   const navigate = useNavigate();
+  const token = localStorage.getItem('token');
   useEffect(() => {
     (async () => {
       if (id) {
@@ -33,7 +37,6 @@ function SingleBook() {
       }
     })();
   }, [id]);
-  console.log(singleBook);
   const handleAddWishList = useCallback(async () => {
     const { payload } = await dispatch(userWishListAddRequest({ bookId: id }));
     if (payload.status === 'error') {
@@ -58,10 +61,18 @@ function SingleBook() {
     await dispatch(userWishListRequest());
   }, [information, error]);
   const handleRead = useCallback(() => {
-    navigate(`/books/single/${id}/book`);
-    console.log(singleBook.title);
+    navigate(`/books/single/${id}/book-preview`);
   }, [singleBook]);
-
+  const handleClick = useCallback(async () => {
+    const data = await axios.post('http://localhost:4000/api/v1/orders/checkout-session', {
+      books: [id],
+    }, {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+    (await stripePromise).redirectToCheckout({ sessionId: data.data.sessionId });
+  }, []);
   return (
     <Wrapper>
       <div className={`${classes.single_book}`}>
@@ -118,9 +129,9 @@ function SingleBook() {
               <button type="button" className={`${classes.button}`} onClick={handleAddCard}>
                 <img src={cardButton} alt="card" />
               </button>
-              <button type="button" className={`${classes.button}`}>
+              {/* <button type="button" className={`${classes.button}`}>
                 <img src={downloadButton} alt="download" />
-              </button>
+              </button> */}
             </div>
             {error ? (
               <p className={`${classes.fail_add}`}>
@@ -133,7 +144,7 @@ function SingleBook() {
                 {information }
               </p>
             )}
-            <button type="button" className={`${classes.button_buy}`}> BUY </button>
+            <button type="button" className={`${classes.button_buy}`} onClick={handleClick}> BUY </button>
           </div>
         </div>
       </div>

@@ -45,6 +45,7 @@
     position: relative;
     width: 100%;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 .title  {
     font-size: 28px;
@@ -172,4 +173,27 @@
     line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
+}
+.books {
+    display: flex;
+    width: 60%;
+}
+
+.book_info {
+    margin-left: 50px;
+  }
+.book_button {
+    width: 100px;
+    padding: 10px 10px;
+    background-color: #8C4C27;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 200px;
+    position: absolute;
+    border: unset;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

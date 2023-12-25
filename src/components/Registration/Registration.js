@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Wrapper from '../Wrapper/Wrapper';
 import signup from '../../assets/images/signup.png';
-import Google from '../../assets/icons/google.svg';
-import Facebook from '../../assets/icons/face.svg';
+// import Google from '../../assets/icons/google.svg';
+// import Facebook from '../../assets/icons/face.svg';
 import classes from './registration.module.css';
 import { registerRequest } from '../../store/actions/users';
 
@@ -111,7 +111,7 @@ function Registration() {
                 </div>
               ) : null}
             </form>
-            <div className={`${classes.social_media}`}>
+            {/* <div className={`${classes.social_media}`}>
               <div className={`${classes.suggestion}`}>
                 <hr className={`${classes.line}`} />
                 <h2 className={`${classes.title}`}> Or </h2>
@@ -121,7 +121,7 @@ function Registration() {
                 <img src={Google} alt="google" />
                 <img src={Facebook} alt="facebook" style={{ marginLeft: 50 }} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

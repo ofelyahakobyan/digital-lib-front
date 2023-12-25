@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import location from '../../assets/icons/location.svg';
 import phone from '../../assets/icons/phone.svg';
 import facebook from '../../assets/icons/facebook.svg';
@@ -9,8 +10,16 @@ import instagram from '../../assets/icons/instagram.svg';
 import payments from '../../assets/icons/icon-pay 1.jpg';
 import logo from '../../assets/icons/logo.svg';
 import classes from './footer.module.css';
+import { getCategoriesListRequest } from '../../store/actions/categories';
 
 function Footer() {
+  const dispatch = useDispatch();
+  const categories = useSelector((state) => state.categories.categories);
+  useEffect(() => {
+    (async () => {
+      dispatch(getCategoriesListRequest());
+    })();
+  }, []);
   return (
     <div className={`${classes.footer}`}>
       <div className={`${classes.container}`}>
@@ -27,18 +36,19 @@ function Footer() {
             <h4 className={`${classes.title}`}> Resources </h4>
             <NavLink to="/home" className={`${classes.link}`}>Home</NavLink>
             <NavLink to="/catalog" className={`${classes.link}`}>Catalog</NavLink>
-            <NavLink to="/new" className={`${classes.link}`}>New</NavLink>
+            <NavLink to="/new-books" className={`${classes.link}`}>New</NavLink>
             <NavLink to="/popular" className={`${classes.link}`}>Popular</NavLink>
-            <NavLink to="/bestseller" className={`${classes.link}`}>Bestseller</NavLink>
-            <NavLink to="/contact_us" className={`${classes.link}`}>Contact us</NavLink>
+            <NavLink to="/contact" className={`${classes.link}`}>Contact us</NavLink>
           </div>
           <div className={`${classes.catalog}`}>
             <h4 className={`${classes.title}`}> Catalog </h4>
-            <NavLink to="/catalog" className={`${classes.link}`}>Fiction</NavLink>
-            <NavLink to="/catalog" className={`${classes.link}`}>Mistic</NavLink>
-            <NavLink to="/catalog" className={`${classes.link}`}>Non-Fiction</NavLink>
-            <NavLink to="/catalog" className={`${classes.link}`}>Documental</NavLink>
-            <NavLink to="/new" className={`${classes.link}`}>New</NavLink>
+            {categories ? categories.map((c) => (
+              <NavLink to={`/books/category/${c.id}`} className={`${classes.link}`} key={c.id}>
+                {' '}
+                {c.category}
+                {' '}
+              </NavLink>
+            )) : null}
           </div>
           <div className={`${classes.catalog}`}>
             <h4 className={`${classes.title}`}> Contacts </h4>

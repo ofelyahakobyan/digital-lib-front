@@ -7423,7 +7423,7 @@ declare class Instance {
     setCustomUIConfiguration: (customUIConfigurationOrConfigurationSetter: CustomUI | ((customUI: CustomUI | null) => CustomUI)) => void;
     getDocumentOutline: () => Promise<List<OutlineElement>>;
     setDocumentOutline: (outline: List<OutlineElement>) => void;
-    getPageGlyphs: (pageIndex: number) => Promise<List<Glyph>>;
+     Glyphs: (pageIndex: number) => Promise<List<Glyph>>;
     setAnnotationCreatorName: (annotationCreatorName?: string | null) => void;
     setOnWidgetAnnotationCreationStart: (callback: OnWidgetAnnotationCreationStartCallback) => void;
     setOnCommentCreationStart: (callback: OnCommentCreationStartCallback) => void;

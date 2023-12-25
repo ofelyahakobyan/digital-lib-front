@@ -10,6 +10,7 @@
     width: 10%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .icon {
     width: 24px;
@@ -34,6 +35,28 @@
     text-align: left;
     margin-left: 40px;
 }
-.link.active {
+.link:active {
     font-weight: 700;
+}
+
+.quantity,
+.quantity_wish{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+    right: 17%;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.quantity_wish {
+    right: 13%;
 }

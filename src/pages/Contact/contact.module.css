@@ -22,13 +22,13 @@
 .image {
     width: 500px;
     height: 630px;
-    }
+}
 .form_container {
-    width: 50%;
+    width: 100%;
     height: 100%;
+    padding-top: 20px;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
 }
 .title {
     font-size: 29px;
@@ -47,7 +47,11 @@
     padding-bottom: 20px;
 }
 .form {
-    width: 100%;
+    width: 60%;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+
 }
 .label {
     font-size: 14px;
@@ -138,4 +142,21 @@
     margin-top: 5px;
 }
 
-
+.img {
+    width: 30%;
+    height: 500px;
+}
+.text {
+    padding-top: 30px;
+    color: darkgreen;
+    text-align: center;
+}
+.error {
+    padding-top: 30px;
+    color: darkred;
+    text-align: center;
+}
+.image {
+    width: 50%;
+    height: 500px;
+}
