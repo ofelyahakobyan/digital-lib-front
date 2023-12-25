@@ -43,6 +43,9 @@ function Contact() {
       setError(e.response.data.errors);
     }
   }, [formData]);
+  setTimeout(() => {
+    setMessage('');
+  }, 25000);
   return (
     <Wrapper>
       <div className={`${classes.register}`}>

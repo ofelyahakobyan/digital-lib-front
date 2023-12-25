@@ -20,16 +20,16 @@ function Search() {
   const authors = useSelector((state) => state.authors.authors);
   const [searchParams, setSearchParams] = useSearchParams();
   const prices = [
-    { id: 1, price: 'All' },
-    { id: 2, price: '<15$' },
-    { id: 3, price: '15$-35$' },
-    { id: 4, price: '>35$' },
+    { id: 30, price: 'All' },
+    { id: 40, price: '<15$' },
+    { id: 50, price: '15$-35$' },
+    { id: 60, price: '>35$' },
   ];
   const languagesArr = [
-    { id: 1, language: 'Armenian' },
-    { id: 2, language: 'English' },
-    { id: 3, language: 'French' },
-    { id: 4, language: 'Chinese' },
+    { id: 70, language: 'Armenian' },
+    { id: 80, language: 'English' },
+    { id: 90, language: 'French' },
+    { id: 95, language: 'Chinese' },
   ];
   console.log(books);
   const [selectedItem, setSelectedItem] = useState([]);
@@ -58,17 +58,17 @@ function Search() {
     setSelectedItem(selectedItem);
   }, []);
   const handleAddPrice = useCallback((id) => {
-    if (id === 1) {
+    if (id === 30) {
       searchParams.set('minPrice', 0);
       searchParams.set('maxPrice', 9999);
-    } else if (id === 2) {
+    } else if (id === 40) {
       searchParams.set('minPrice', 0);
       searchParams.set('maxPrice', 15);
-    } else if (id === 3) {
+    } else if (id === 50) {
       searchParams.set('minPrice', 15);
       searchParams.set('maxPrice', 35);
       setSearchParams(searchParams);
-    } else if (id === 4) {
+    } else if (id === 60) {
       searchParams.set('minPrice', 35);
       searchParams.set('maxPrice', 9999);
     }

@@ -64,14 +64,18 @@ function SingleBook() {
     navigate(`/books/single/${id}/book-preview`);
   }, [singleBook]);
   const handleClick = useCallback(async () => {
-    const data = await axios.post('http://localhost:4000/api/v1/orders/checkout-session', {
-      books: [id],
-    }, {
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    });
-    (await stripePromise).redirectToCheckout({ sessionId: data.data.sessionId });
+    try {
+      const data = await axios.post('http://localhost:4000/api/v1/orders/checkout-session', {
+        books: [id],
+      }, {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      (await stripePromise).redirectToCheckout({ sessionId: data.data.sessionId });
+    } catch (e) {
+      console.log(e);
+    }
   }, []);
   return (
     <Wrapper>

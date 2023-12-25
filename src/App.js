@@ -34,7 +34,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/user/verification" element={<ResetPassword />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/new-books" element={<New />} />
