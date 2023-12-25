@@ -181,6 +181,7 @@
 
 .book_info {
     margin-left: 50px;
+    width: 70%;
   }
 .book_button {
     width: 100px;
@@ -196,4 +197,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.listen_button {
+        width: 100px;
+        padding: 10px 10px;
+        background-color: #8C4C27;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+        position: absolute;
+        border: unset;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.book_desc {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+         max-width: 350px;
+    margin-top: 15px;
+}
+.book_title {
+    text-decoration: unset;
+    color: black;
 }

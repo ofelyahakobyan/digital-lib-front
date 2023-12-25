@@ -51,11 +51,19 @@ function UserBooks() {
             <div key={b.id} className={`${classes.personal_info}`}>
               <img src={`http://localhost:4000/${b.bookFiles.coverS}`} alt="cover" />
               <div className={`${classes.book_info}`}>
-                <h3>
+                <Link to={`/books/single/${b.id}`} className={`${classes.book_title}`}>
+                  <h3 className={`${classes.book_title}`}>
+                    {' '}
+                    {b.title}
+                  </h3>
+                </Link>
+
+                <p className={`${classes.book_desc}`}>
                   {' '}
-                  {b.title}
-                </h3>
+                  {b.description}
+                </p>
                 <Link to={`/books/single/${b.id}/book-full`} className={`${classes.book_button}`}>READ</Link>
+                {b.audio ? <Link to={`/books/audio/${b.id}`} className={`${classes.listen_button}`}>Listen</Link> : null}
               </div>
             </div>
           )) : null}

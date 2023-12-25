@@ -66,6 +66,9 @@ function BookInfo(props) {
     setInformation('');
     setError(false);
   }, [hover]);
+  const handleAudioMessage = useCallback(() => {
+    setInformation('You should buy the book, if you wish to listen');
+  }, []);
   return (
     <div className={`${classes.info}`}>
       <div
@@ -98,9 +101,11 @@ function BookInfo(props) {
                       <img src={wish} alt="wish" />
                     </button>
                   )}
-                <button type="button" className={`${classes.button}`}>
-                  <img src={audio} alt="audio" />
-                </button>
+                {data.audio ? (
+                  <button type="button" className={`${classes.button}`} onClick={handleAudioMessage}>
+                    <img src={audio} alt="audio" />
+                  </button>
+                ) : null}
                 {added ? (
                   <button type="button" onClick={handleAddCard} className={`${classes.button}`}>
                     <img src={selectedCart} alt="card" className={`${classes.delete_button}`} />
